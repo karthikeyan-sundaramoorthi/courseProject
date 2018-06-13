@@ -1,14 +1,16 @@
-<app-header>
+<app-header (throwName)="getName($event)">
 </app-header>
 <div class="container-fluid">
 	<div class="row">
-		<div class="col-12">
+		<div class="col-12" *ngIf="showComponent == 'home'; else showWishlist">
 			<app-bikes>
 			</app-bikes>
 		</div>
-		<div class="col-12">
-			<app-wish-list>
-			</app-wish-list>
-		</div>
+		<ng-template #showWishlist>
+			<div class="col-12">
+				<app-wish-list>
+				</app-wish-list>
+			</div>
+		</ng-template>
 	</div>
 </div>

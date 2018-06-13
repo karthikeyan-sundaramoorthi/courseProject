@@ -6,6 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./bikes.component.css']
 })
 export class BikesComponent {
-
+	parentName:string = 'Yamaha';
   constructor() { }
 }
