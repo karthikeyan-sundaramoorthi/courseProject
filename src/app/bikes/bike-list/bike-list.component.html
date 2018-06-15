@@ -6,17 +6,9 @@
 <br>
 <div class="row">
   <div class="col-6" *ngFor="let bike of bikes">
-   <div class="card">
-		<img class="card-img-top" [src]="bike.imagePath" [alt]="bike.name">
-			<div class="card-body">
-			<h5 class="card-title">{{ bike.name }}</h5>
-			<p class="card-text">{{ (bike.description).substring(0, 75) }}</p>
-				<a href="#" class="btn btn-primary">Get Details</a>
-			</div>
-	</div>
+   
+	<app-bike-item [bike]="bike" (click) = "selectBike(bike)">
+	</app-bike-item>
 
   </div>
 </div>
-
-<app-bike-item>
-</app-bike-item>

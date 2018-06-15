@@ -1,3 +1,9 @@
-<p>
-  bike-item works!
-</p>
+<div class="card cursor">
+	<img class="card-img-top" [src]="bike.imagePath" [alt]="bike.name">
+	<div class="card-body">
+	<h5 class="card-title">
+		{{ bike.name }}
+		<span class="badge badge-warning float-right"> &#x20b9; {{ bike.amount }} </span></h5>
+		<!-- <a href="#" class="btn btn-primary">Get Details</a> -->
+	</div>
+</div>

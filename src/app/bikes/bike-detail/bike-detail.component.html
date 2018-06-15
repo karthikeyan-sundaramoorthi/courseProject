@@ -1,3 +1,20 @@
-<p>
-  Received the name => {{childName}}
-</p>
+<div class="row shadow-sm p-2">
+	<div *ngIf="bikeChild; else default" class="row">
+		<div class="col-7">
+		  <img [src]="bikeChild.imagePath" alt="bike-image" class="img-fluid"/> 
+		</div>
+		<div class="col-5">
+			<h3>{{ bikeChild.name }}</h3>
+			<div class="badge badge-warning"> &#x20b9; {{ bikeChild.amount }} </div>
+			<input type="button" value="Add to Wish-List" class="mt-1 btn btn-outline-warning">
+		</div>
+		<div class="col-12">
+			<div class="alert alert-light" role="alert">
+				{{ bikeChild.description }}
+			</div>
+		</div>
+	</div>
+	<ng-template #default>
+		<h3>Please select a Bike</h3>
+	</ng-template>
+</div>

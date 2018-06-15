@@ -1,11 +1,11 @@
 <br>
 <div class="row site-width">
   <div class="col-6">
-	<app-bike-list>
+	<app-bike-list (bikeChoosen) = "bikeParent = $event">
 	</app-bike-list>
   </div>
   <div class="col-6">
-	<app-bike-detail [childName]="parentName">
+	<app-bike-detail [bikeChild]="bikeParent">
 	</app-bike-detail>
 	<app-bike-edit>
 	</app-bike-edit>

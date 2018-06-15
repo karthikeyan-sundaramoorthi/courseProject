@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Bike } from '../bike.model';
 
 @Component({
   selector: 'app-bike-detail',
@@ -6,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./bike-detail.component.css']
 })
 export class BikeDetailComponent implements OnInit {
-	@Input() childName:string;
+	@Input() bikeChild:Bike;
   constructor() { }
 
   ngOnInit() {
