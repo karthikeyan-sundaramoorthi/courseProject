@@ -10,6 +10,7 @@ import { BikeItemComponent } from './bikes/bike-List/bike-item/bike-item.compone
 import { BikeDetailComponent } from './bikes/bike-detail/bike-detail.component';
 import { BikeEditComponent } from './bikes/bike-edit/bike-edit.component';
 import { WishListComponent } from './wish-list/wish-list.component';
+import { AddClassDirective } from './addClass.directive';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { WishListComponent } from './wish-list/wish-list.component';
     BikeItemComponent,
     BikeDetailComponent,
     BikeEditComponent,
-    WishListComponent
+    WishListComponent,
+    AddClassDirective
   ],
   imports: [
     BrowserModule,

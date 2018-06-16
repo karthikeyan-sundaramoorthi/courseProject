@@ -12,5 +12,9 @@ export class BikeDetailComponent implements OnInit {
 
   ngOnInit() {
   }
+  ngOnChanges(){
+  	console.log('on Change');
+
+  }
 
 }

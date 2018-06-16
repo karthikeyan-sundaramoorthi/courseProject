@@ -11,6 +11,17 @@ export class BikeItemComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  	console.log('Init');
   }
+
+  ngOnChanges(){
+  	console.log('on Change');
+}
+  ngDoCheck(){
+  	console.log('ngDoCheck');
+}
+ngAfterContentInit(){
+  	console.log('ngAfterContentInit');
+}
 
 }
