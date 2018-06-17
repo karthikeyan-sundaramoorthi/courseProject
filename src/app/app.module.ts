@@ -11,6 +11,9 @@ import { BikeDetailComponent } from './bikes/bike-detail/bike-detail.component';
 import { BikeEditComponent } from './bikes/bike-edit/bike-edit.component';
 import { WishListComponent } from './wish-list/wish-list.component';
 import { AddClassDirective } from './addClass.directive';
+import { ServiceTestComponent } from './service-test/service-test.component';
+import { ServiceChildComponent } from './service-test/service-child/service-child.component';
+import { ServiceChild2Component } from './service-test/service-child2/service-child2.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +25,10 @@ import { AddClassDirective } from './addClass.directive';
     BikeDetailComponent,
     BikeEditComponent,
     WishListComponent,
-    AddClassDirective
+    AddClassDirective,
+    ServiceTestComponent,
+    ServiceChildComponent,
+    ServiceChild2Component
   ],
   imports: [
     BrowserModule,

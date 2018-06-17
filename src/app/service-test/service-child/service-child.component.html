@@ -1,0 +1,14 @@
+<div>
+	<label> First Name </label>
+	<input type="text" name="fName" #fName>
+</div>
+<br>
+<div>
+	
+<label>Last Name </label>
+<input type="text" name="lName" #lName>
+</div>
+<br>
+<input type="button" name="name" value="Get Name" (click)="getName(fName, lName)">
+
+<h2 *ngIf="result"> My Name is {{ result}}</h2>
