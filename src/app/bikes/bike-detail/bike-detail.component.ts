@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Bike } from '../bike.model';
+import { BikeService } from '../bikes.service';  
 
 @Component({
   selector: 'app-bike-detail',
@@ -7,14 +8,19 @@ import { Bike } from '../bike.model';
   styleUrls: ['./bike-detail.component.css']
 })
 export class BikeDetailComponent implements OnInit {
-	@Input() bikeChild:Bike;
-  constructor() { }
+  bikeChild:Bike;
+  constructor(private bikeService: BikeService) { }
 
   ngOnInit() {
+    this.bikeService.bikeChoosen.subscribe((bikeReceived:Bike) => {
+      this.bikeChild = bikeReceived;
+    });
   }
   ngOnChanges(){
   	console.log('on Change');
 
   }
-
+  addToWishList(){
+    this.bikeService.addInterestedBike(this.bikeChild.name);
+  }
 }

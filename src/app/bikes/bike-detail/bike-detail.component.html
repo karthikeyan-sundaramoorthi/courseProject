@@ -6,7 +6,7 @@
 		<div class="col-5">
 			<h3>{{ bikeChild.name }}</h3>
 			<div class="badge badge-warning"> &#x20b9; {{ bikeChild.amount }} </div>
-			<input type="button" value="Add to Wish-List" class="mt-1 btn btn-outline-warning">
+			<input type="button" value="Add to Wish-List" class="mt-1 btn btn-outline-warning" (click) = "addToWishList()">
 		</div>
 		<div class="col-12">
 			<div class="alert alert-light" role="alert">

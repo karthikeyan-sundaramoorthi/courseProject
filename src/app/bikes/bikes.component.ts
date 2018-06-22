@@ -1,15 +1,15 @@
 import { Component } from '@angular/core';
 import { Bike } from './bike.model';
+import { BikeService } from './bikes.service';
+
 @Component({
   selector: 'app-bikes',
   templateUrl: './bikes.component.html',
-  styleUrls: ['./bikes.component.css']
+  styleUrls: ['./bikes.component.css'],
+  providers: [BikeService]
 })
 export class BikesComponent {
-	bikeParent:Bike;
   constructor() { }
 
-  /*bikeChoosenParent(bikeSelectedParent: Bike){
-  	this.bikeParent = bikeSelectedParent;
-  }*/
+  
 }
